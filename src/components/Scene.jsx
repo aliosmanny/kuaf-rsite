@@ -11,7 +11,7 @@ export default function Scene() {
   const modelRef = useRef();
   const floatRef = useRef();
   const groupRef = useRef();
-  const { scene } = useGLTF('/models/bust.glb');
+  const { scene } = useGLTF('/models/Meshy_AI_Create_a_contemporary.glb');
 
   // Optimizasyon: Kullanıcının kendi modelinin kaplamasını koruyup, cilalı taş hissiyatı ekliyoruz
   useEffect(() => {
@@ -76,7 +76,7 @@ export default function Scene() {
         <group ref={floatRef}>
           {/* Kreatif Direktör Kadrajı: Boyutu büyüttük, ancak açıyı ve konumu orijinaline yakın tutuyoruz */}
           <group ref={modelRef} rotation={[0.04, -0.05, 0]}>
-            <primitive object={scene} scale={1.2} position={[0.8, -1.2, 0]} />
+            <primitive object={scene} scale={2.9} position={[1.0, -0.5, 0]} />
           </group>
         </group>
         
@@ -93,4 +93,4 @@ export default function Scene() {
   );
 }
 
-useGLTF.preload('/models/bust.glb');
+useGLTF.preload('/models/Meshy_AI_Create_a_contemporary.glb');
