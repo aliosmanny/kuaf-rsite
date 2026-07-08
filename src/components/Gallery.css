@@ -1,0 +1,82 @@
+.gallery {
+  padding: 10rem 0 5rem 0; /* Huge whitespace, blending seamlessly from Hero */
+  background-color: var(--bg-color);
+}
+
+.gallery-masonry {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.gallery-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.right-col .push-down {
+  margin-top: 15%; /* Asymmetrical drop */
+}
+
+/* Image Wrappers */
+.gallery-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px; /* Very slight editorial softness */
+  background-color: #eee;
+}
+
+.gallery-img-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  pointer-events: none;
+}
+
+.gallery-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Proportions (Approximate based on aspects) */
+.large-portrait {
+  aspect-ratio: 3 / 4;
+}
+
+.small-square {
+  aspect-ratio: 1 / 1;
+}
+
+.cinematic {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+/* Hover States */
+.gallery-img-wrapper:hover img {
+  transform: scale(1.02);
+}
+
+.gallery-img-wrapper:hover::after {
+  background-color: rgba(0, 0, 0, 0.05); /* Slightly darker overlay */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gallery {
+    padding: 6rem 0 2rem 0;
+  }
+  .gallery-masonry {
+    flex-direction: column;
+  }
+  .right-col .push-down {
+    margin-top: 0;
+  }
+}

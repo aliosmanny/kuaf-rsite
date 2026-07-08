@@ -1,0 +1,57 @@
+.about {
+  padding: 18rem 0; /* Massively increased vertical spacing */
+  background-color: var(--bg-color);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Oversized Typography */
+.about::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-heading);
+  font-size: clamp(20rem, 35vw, 40rem);
+  font-weight: 300;
+  color: var(--text-main);
+  opacity: 0.03; /* 3% opacity */
+  z-index: 0;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.about-container {
+  position: relative;
+  z-index: 10;
+}
+
+.section-title {
+  font-size: 0.75rem; /* Refined hierarchy */
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  color: var(--text-muted);
+  margin-bottom: 4rem; /* Increased spacing to paragraph */
+  font-family: var(--font-body);
+}
+
+.about-text {
+  font-size: 2.5rem;
+  font-family: var(--font-heading);
+  max-width: 650px; /* Reduced width for improved readability */
+  margin: 0 auto;
+  line-height: 1.8; /* Elegant reading rhythm */
+  color: var(--text-main);
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 8rem 0; /* Consistent mobile rhythm */
+  }
+  .about-text {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+  }
+}

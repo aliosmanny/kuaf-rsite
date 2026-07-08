@@ -1,0 +1,97 @@
+.services {
+  padding: 14rem 0; /* Massively increased vertical spacing for rhythm */
+  background-color: var(--bg-color);
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.services-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.service-item {
+  padding: 3.5rem 0;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.05); /* Thinner, softer, lower opacity */
+  transition: border-bottom-color 0.6s ease;
+  cursor: pointer;
+}
+
+.service-item:hover {
+  border-bottom-color: rgba(17, 17, 17, 0.15); /* Divider gently brightens */
+}
+
+.service-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service-name {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.service-arrow {
+  opacity: 0;
+  margin-left: 1.5rem;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--accent);
+  transform: translateX(-10px);
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.service-item:hover .service-name {
+  transform: translateX(12px); /* Smooth shift to the right */
+}
+
+.service-item:hover .service-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.service-line {
+  display: none; /* Reduced visual clutter: removed the noisy dotted/solid middle lines entirely */
+}
+
+.service-price {
+  font-family: var(--font-body);
+  font-size: 0.95rem; /* Reduced visual weight */
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-left: 2rem;
+  transition: color 0.6s ease;
+}
+
+.service-item:hover .service-price {
+  color: var(--accent); /* Price transitions to champagne */
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 8rem 0; /* Consistent mobile rhythm */
+  }
+  .service-name {
+    font-size: 1.3rem;
+  }
+  .service-line {
+    margin: 0 1rem;
+  }
+  .service-item {
+    padding: 1.5rem 0;
+  }
+  .service-item:hover {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

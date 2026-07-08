@@ -1,0 +1,71 @@
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.8rem 0; /* Reduced by ~15-20% */
+  z-index: 100;
+  background: transparent;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo a {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 3px; /* Subtly increased */
+  text-transform: uppercase;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 5rem; /* Increased whitespace for editorial feel */
+}
+
+.nav-link {
+  font-size: 0.8rem; /* Reduced visual weight */
+  font-weight: 300; /* Lighter */
+  letter-spacing: 2px; /* Subtly increased */
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--text-main);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.btn-small {
+  padding: 0.75rem 2.8rem; /* Elegant proportions: slightly larger horizontal padding */
+  font-size: 0.75rem; 
+  letter-spacing: 2.5px; /* Subtly increased */
+  border: 1px solid rgba(17, 17, 17, 0.1); /* Visually thinner and softer */
+  border-radius: 4px; /* Softer, modern editorial corner radius */
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+  .navbar-container {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+}
