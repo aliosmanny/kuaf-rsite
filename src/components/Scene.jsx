@@ -76,7 +76,7 @@ export default function Scene() {
         <group ref={floatRef}>
           {/* Kreatif Direktör Kadrajı: Boyutu büyüttük, ancak açıyı ve konumu orijinaline yakın tutuyoruz */}
           <group ref={modelRef} rotation={[0.04, -0.05, 0]}>
-            <primitive object={scene} scale={2.9} position={[1.0, -0.5, 0]} />
+            <primitive object={scene} scale={1.2} position={[0.8, -1.2, 0]} />
           </group>
         </group>
         
