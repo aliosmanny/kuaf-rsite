@@ -11,7 +11,7 @@ export default function Scene() {
   const modelRef = useRef();
   const floatRef = useRef();
   const groupRef = useRef();
-  const { scene } = useGLTF('/models/model_optimized.glb');
+  const { scene } = useGLTF('/models/model_final.glb');
 
   // Optimizasyon: Kullanıcının kendi modelinin kaplamasını koruyup, cilalı taş hissiyatı ekliyoruz
   useEffect(() => {
@@ -93,4 +93,4 @@ export default function Scene() {
   );
 }
 
-useGLTF.preload('/models/model_optimized.glb');
+useGLTF.preload('/models/model_final.glb');
